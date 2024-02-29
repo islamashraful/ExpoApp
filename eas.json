@@ -1,0 +1,34 @@
+{
+  "cli": {
+    "version": ">= 7.3.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "APP_VARIANT": "staging"
+      }
+    },
+    "development-simulator": {
+      "extends": "development",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "staging": {
+      "env": {
+        "APP_VARIANT": "staging"
+      },
+      "autoIncrement": true
+    },
+    "production": {
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "staging": {},
+    "production": {}
+  }
+}
