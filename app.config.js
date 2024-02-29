@@ -32,6 +32,7 @@ export default () => {
       eas: {
         projectId: "9a9d13ba-cff2-4488-9780-a6a7c80fd3c6",
       },
+      API_ENDPOINT: "https://imaginary-endpoint.com",
     },
   };
 
@@ -51,6 +52,10 @@ export default () => {
           backgroundColor: "#ffffff",
         },
         package: "com.ash.expoapp.stg",
+      },
+      extra: {
+        ...productionConfig.extra,
+        API_ENDPOINT: "https://stg.imaginary-endpoint.com",
       },
     };
   }
